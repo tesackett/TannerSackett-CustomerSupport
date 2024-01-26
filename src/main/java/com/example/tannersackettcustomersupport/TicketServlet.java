@@ -126,3 +126,48 @@ public class TicketServlet extends HttpServlet {
         // Redirect to view the newly created ticket
         response.sendRedirect("tickets?action=viewTicket&ticketId=" + ticketId);
     }
+    private Attachment processAttachment(Part file) throws IOException {
+        InputStream in = file.getInputStream();
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+
+
+        int read;
+        final byte[] bytes = new byte[1024];
+        while ((read = in.read(bytes)) != -1) {
+            out.write(bytes, 0, read);
+        }
+
+        // Creating an Attachment object
+        Attachment attachment = new Attachment();
+        attachment.setName(file.getSubmittedFileName());
+        attachment.setContents(out.toByteArray());
+
+        return attachment;
+    }
+
+    private void downloadAttachment(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int ticketId = Integer.parseInt(request.getParameter("ticketId"));
+        int attachmentId = Integer.parseInt(request.getParameter("attachmentId"));
+
+        Ticket ticket = ticketMap.get(ticketId);
+
+        if (ticket == null) {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND, "Ticket not found");
+            return;
+        }
+
+        Attachment attachment = ticket.getAttachment(attachmentId);
+
+        if (attachment == null) {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND, "Attachment not found");
+            return;
+        }
+
+        response.setContentType("application/octet-stream");
+        response.setHeader("Content-Disposition", "attachment; filename=" + attachment.getName());
+
+        try (OutputStream outStream = response.getOutputStream()) {
+            outStream.write(attachment.getContents());
+        }
+    }
+}
