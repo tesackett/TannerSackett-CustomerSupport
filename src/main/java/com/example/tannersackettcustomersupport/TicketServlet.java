@@ -1,27 +1,49 @@
 package com.example.tannersackettcustomersupport;
 
 import java.io.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import java.util.HashMap;
+import java.util.Map;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.WebServlet;
+
+@WebServlet(name = "TicketServlet", value = "/tickets")
+@MultipartConfig(fileSizeThreshold = 5242880, maxFileSize = 20971520L, maxRequestSize = 4194340L)
 public class TicketServlet extends HttpServlet {
-    private String message;
+    private Map<Integer, Ticket> ticketMap;
 
     public void init() {
-        message = "Hello World!";
+        ticketMap = new HashMap<>();
     }
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
+        if (action == null) {
+            action = "listTickets";
+        }
 
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
+        switch (action) {
+            case "listTickets":
+                listTickets(request, response);
+                break;
+            case "viewTicket":
+                viewTicket(request, response);
+                break;
+            case "downloadAttachment":
+                downloadAttachment(request, response);
+                break;
+            default:
+                listTickets(request, response);
+        }
     }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
 
-    public void destroy() {
+        if ("createTicket".equals(action)) {
+            createTicket(request, response);
+        } else {
+            listTickets(request, response);
+        }
     }
-}
