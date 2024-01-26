@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd6b7ce1-de10-49b8-9f54-40af33ea5062" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/TicketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TicketTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="fd6b7ce1-de10-49b8-9f54-40af33ea5062" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +34,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Tomcat Server.Tomcat 10.1.18.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -46,6 +45,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sacke\OneDrive\Desktop\TannerSackett-CustomerSupport\src\main\webapp" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.18" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.18" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
@@ -61,6 +65,21 @@
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
@@ -77,7 +96,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706247144562</updated>
-      <workItem from="1706247145646" duration="358000" />
+      <workItem from="1706247145646" duration="1427000" />
     </task>
     <servers />
   </component>
