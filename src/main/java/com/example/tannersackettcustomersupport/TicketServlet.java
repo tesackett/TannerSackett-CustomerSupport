@@ -3,6 +3,7 @@ package com.example.tannersackettcustomersupport;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+import jakarta.servlet.RequestDispatcher;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -48,24 +49,14 @@ public class TicketServlet extends HttpServlet {
         }
     }
     private void listTickets(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h2>List of Tickets</h2>");
 
-        if (ticketMap.isEmpty()) {
-            out.println("<p>No tickets available.</p>");
-        } else {
-            out.println("<ul>");
-            for (Map.Entry<Integer, Ticket> entry : ticketMap.entrySet()) {
-                int ticketId = entry.getKey();
-                out.println("<li><a href='tickets?action=viewTicket&ticketId=" + ticketId + "'>Ticket #" + ticketId + "</a></li>");
-            }
-            out.println("</ul>");
-        }
+        request.setAttribute("ticketDB", ticketMap);
 
-        out.println("<a href='ticketForm.jsp'>Create Ticket</a>");
-        out.println("</body></html>");
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/view/listTickets.jsp");
+        dispatcher.forward(request, response);
     }
+
 
     private void viewTicket(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int ticketId = Integer.parseInt(request.getParameter("ticketId"));
@@ -113,7 +104,7 @@ public class TicketServlet extends HttpServlet {
         if (attachmentPart != null) {
             Attachment attachment = processAttachment(attachmentPart);
             if (attachment != null) {
-                // If attachment processed successfully, add it to the ticket
+                // If attachment successfull, add it to the ticket
                 ticket.addAttachment(attachment.getId(), attachment);
             }
         }
@@ -143,6 +134,10 @@ public class TicketServlet extends HttpServlet {
         attachment.setContents(out.toByteArray());
 
         return attachment;
+    }
+    private void showTicketForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Forward the request to ticketForm.jsp
+        request.getRequestDispatcher("/WEB-INF/jsp/view/ticketForm.jsp").forward(request, response);
     }
 
     private void downloadAttachment(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
