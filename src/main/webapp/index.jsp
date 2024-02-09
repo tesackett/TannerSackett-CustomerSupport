@@ -9,5 +9,6 @@
 </h1>
 <br/>
 <a href="tickets">Go to Tickets</a>
+<a href="login.jsp"> Go to login</a>
 </body>
 </html>
