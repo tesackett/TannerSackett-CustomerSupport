@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd6b7ce1-de10-49b8-9f54-40af33ea5062" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tannersackettcustomersupport/CustomerSupportApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tannersackettcustomersupport/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tannersackettcustomersupport/TicketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tannersackettcustomersupport/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fd6b7ce1-de10-49b8-9f54-40af33ea5062" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,7 +157,7 @@
       <workItem from="1707445929661" duration="2903000" />
       <workItem from="1707448854202" duration="1252000" />
       <workItem from="1707450120403" duration="950000" />
-      <workItem from="1707532783849" duration="4115000" />
+      <workItem from="1707532783849" duration="4418000" />
     </task>
     <servers />
   </component>

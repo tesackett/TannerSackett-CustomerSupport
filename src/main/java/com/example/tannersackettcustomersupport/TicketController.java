@@ -16,13 +16,13 @@ public class TicketController {
     private final Map<Integer, Ticket> ticketMap = new HashMap<>();
 
     public TicketController() {
-        // Initialize your ticket map or load tickets if needed
+
     }
 
     @GetMapping
     public String listTickets(Model model) {
         model.addAttribute("ticketDB", ticketMap);
-        return "listTickets";  // Corresponding JSP or Thymeleaf view
+        return "listTickets";
     }
 
     @GetMapping("/view")

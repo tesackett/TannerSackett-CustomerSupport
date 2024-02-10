@@ -17,7 +17,6 @@ public class LoginServlet extends HttpServlet {
     static {
         userDB.put("user1", "password1");
         userDB.put("user2", "password2");
-        // Add more users as needed
     }
 
     @Override
