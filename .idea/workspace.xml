@@ -10,13 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd6b7ce1-de10-49b8-9f54-40af33ea5062" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tannersackettcustomersupport/CustomerSupportApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tannersackettcustomersupport/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tannersackettcustomersupport/TicketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tannersackettcustomersupport/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tannersackettcustomersupport/SessionRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tannersackettcustomersupport/SessionRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tannersackettcustomersupport/TicketServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tannersackettcustomersupport/TicketServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/listTickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/listTickets.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/ticketForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ticketForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +91,7 @@
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -164,7 +164,7 @@
       <workItem from="1707445929661" duration="2903000" />
       <workItem from="1707448854202" duration="1252000" />
       <workItem from="1707450120403" duration="950000" />
-      <workItem from="1707532783849" duration="1979000" />
+      <workItem from="1707532783849" duration="4115000" />
     </task>
     <servers />
   </component>
