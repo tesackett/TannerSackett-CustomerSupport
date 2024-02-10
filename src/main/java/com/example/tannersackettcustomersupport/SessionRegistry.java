@@ -1,7 +1,10 @@
 package com.example.tannersackettcustomersupport;
 
 import jakarta.servlet.http.HttpSession;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class SessionRegistry {
@@ -15,7 +18,7 @@ public class SessionRegistry {
         activeSessions.remove(sessionId);
     }
 
-    public static Map<String, HttpSession> getActiveSessions() {
-        return activeSessions;
+    public static List<Map.Entry<String, HttpSession>> getActiveSessions() {
+        return new ArrayList<>(activeSessions.entrySet());
     }
 }

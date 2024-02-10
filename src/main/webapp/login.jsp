@@ -8,7 +8,7 @@
     <title>Login</title>
 </head>
 <body>
-<p> Please Log in</p>
+<h1>Login Page</h1>
 <form action="login" method="post">
     <label for="username">Username:</label><br>
     <input type="text" id="username" name="username"><br>

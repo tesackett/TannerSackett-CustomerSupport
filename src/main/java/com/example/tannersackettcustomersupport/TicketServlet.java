@@ -1,14 +1,17 @@
 package com.example.tannersackettcustomersupport;
 
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Part;
+
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
-import jakarta.servlet.RequestDispatcher;
-
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.MultipartConfig;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.WebServlet;
 
 @WebServlet(name = "TicketServlet", value = "/tickets")
 @MultipartConfig(fileSizeThreshold = 5242880, maxFileSize = 20971520L, maxRequestSize = 4194340L)
@@ -31,6 +34,9 @@ public class TicketServlet extends HttpServlet {
                 break;
             case "viewTicket":
                 viewTicket(request, response);
+                break;
+            case "showTicketForm":  // Add this case
+                showTicketForm(request, response);
                 break;
             case "downloadAttachment":
                 downloadAttachment(request, response);
@@ -137,7 +143,7 @@ public class TicketServlet extends HttpServlet {
     }
     private void showTicketForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Forward the request to ticketForm.jsp
-        request.getRequestDispatcher("/WEB-INF/jsp/view/ticketForm.jsp").forward(request, response);
+        request.getRequestDispatcher("/ticketForm.jsp").forward(request, response);
     }
 
     private void downloadAttachment(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -26,6 +26,7 @@
     </ul>
 </c:if>
 
-<a href="ticketForm.jsp">Create Ticket</a>
+<a href="/TannerSackett_CustomerSupport_war_exploded/ticketForm.jsp">Create Ticket</a>
+
 </body>
 </html>
